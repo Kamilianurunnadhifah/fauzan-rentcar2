@@ -1,0 +1,116 @@
+/* Fauzan Rentcar v2 Styles (Light theme from Figma tokens) */
+:root {
+  --font-size: 16px;
+  --background: #ffffff;
+  --foreground: oklch(0.145 0 0);
+  --card: #ffffff;
+  --card-foreground: oklch(0.145 0 0);
+  --primary: #030213;
+  --primary-foreground: oklch(1 0 0);
+  --secondary: oklch(0.95 0.0058 264.53);
+  --secondary-foreground: #030213;
+  --muted: #ececf0;
+  --muted-foreground: #717182;
+  --accent: #e9ebef;
+  --accent-foreground: #030213;
+  --border: rgba(0, 0, 0, 0.1);
+  --radius: 0.625rem;
+  --font-weight-medium: 500;
+  --font-weight-normal: 400;
+}
+
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;font-size:var(--font-size);}
+body{
+  background:var(--background);
+  color:var(--foreground);
+  font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,'Helvetica Neue',Arial,'Noto Sans',sans-serif;
+  line-height:1.6;
+}
+
+/* Generic utilities */
+.container{max-width:1100px;margin-inline:auto;padding:0 20px}
+.section{padding:64px 0}
+h1,h2,h3{line-height:1.25;margin:0 0 12px}
+h1{font-size:clamp(28px,4vw,44px);font-weight:700;color:var(--primary)}
+h2{font-size:clamp(22px,3vw,32px);font-weight:700;color:var(--primary)}
+h3{font-size:20px;font-weight:700;color:var(--foreground)}
+p{margin:0 0 16px;color:var(--muted-foreground)}
+
+/* Header */
+.site-header{position:sticky;top:0;z-index:30;background:var(--card);border-bottom:1px solid var(--border)}
+.site-header .nav{display:flex;align-items:center;justify-content:space-between;height:64px}
+.brand{display:flex;align-items:center;gap:10px;font-weight:600}
+.brand .logo{font-size:22px}
+.brand-text strong{color:var(--primary)}
+.menu{display:flex;gap:20px}
+.menu a{color:var(--foreground);text-decoration:none;font-weight:500}
+.menu a:hover{color:var(--primary)}
+.cta{background:var(--primary);color:var(--primary-foreground);text-decoration:none;padding:10px 16px;border-radius:var(--radius);font-weight:600}
+.cta:hover{background:var(--secondary);color:var(--secondary-foreground)}
+
+/* Hero */
+.hero{background:linear-gradient(180deg,var(--background) 0%, var(--muted) 100%)}
+.hero-inner{display:grid;grid-template-columns:1.2fr 1fr;gap:32px;align-items:center}
+.hero-copy p{font-size:18px}
+.hero-actions{display:flex;gap:12px;margin:12px 0 8px}
+.btn{display:inline-block;padding:12px 18px;border-radius:var(--radius);font-weight:600;text-decoration:none}
+.btn.primary{background:var(--primary);color:var(--primary-foreground)}
+.btn.primary:hover{background:var(--secondary);color:var(--secondary-foreground)}
+.btn.outline{border:2px solid var(--primary);color:var(--primary)}
+.btn.outline:hover{background:var(--accent);color:var(--accent-foreground)}
+.features{display:flex;gap:18px;list-style:none;padding:0;margin:12px 0 0;color:var(--foreground)}
+.hero-media img{width:100%;height:auto;border-radius:var(--radius);box-shadow:0 10px 30px rgba(2,6,23,.12)}
+
+/* Booking */
+.booking .form{margin-top:12px;background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:20px;box-shadow:0 10px 30px rgba(2,6,23,.05)}
+.form .grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+label{display:flex;flex-direction:column;gap:6px;font-weight:var(--font-weight-medium);color:var(--foreground)}
+input,select{padding:12px 14px;border-radius:var(--radius);border:1px solid var(--border);font:inherit;background:var(--muted);color:var(--foreground)}
+input:focus,select:focus{outline:none;border-color:var(--primary);box-shadow:0 0 0 3px var(--accent)}
+
+/* Catalog */
+.catalog-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:16px}
+.card-car{border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;background:var(--card);display:flex;flex-direction:column}
+.card-car img{width:100%;height:160px;object-fit:cover}
+.card-body{padding:14px;display:flex;flex-direction:column;gap:10px}
+.price{display:grid;grid-template-columns:1fr 1fr 1fr;gap:6px;font-size:13px;color:var(--foreground)}
+.price span{background:var(--muted);border-radius:var(--radius);padding:6px 8px;border:1px solid var(--border);text-align:center}
+.card-actions{margin-top:auto;display:flex;gap:8px}
+.card-actions .btn{width:100%;text-align:center}
+
+/* Paket & Syarat */
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:12px}
+.card{border:1px solid var(--border);border-radius:var(--radius);padding:16px;background:var(--card)}
+.terms{margin-top:20px;background:var(--accent);border:1px solid var(--border);border-radius:var(--radius);padding:16px}
+.terms ul{margin:8px 0 0}
+
+/* Lokasi */
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:20px;align-items:start}
+.map-wrap iframe{width:100%;height:320px;border:0;border-radius:var(--radius)}
+.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:10px}
+.gallery img{width:100%;height:120px;object-fit:cover;border-radius:var(--radius)}
+
+/* Footer */
+.site-footer{background:var(--primary);color:var(--primary-foreground);padding:32px 0;margin-top:40px}
+.footer-inner{display:flex;flex-direction:column;gap:16px}
+.footer-brand{font-weight:700}
+.foot-cols{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.nav-mini{list-style:none;padding:0;margin:0}
+.nav-mini a{color:var(--secondary);text-decoration:none}
+.nav-mini a:hover{color:var(--primary-foreground)}
+.copy{border-top:1px solid rgba(255,255,255,.15);padding-top:12px;color:var(--secondary);font-size:14px}
+
+/* Responsive */
+@media (max-width: 960px){
+  .hero-inner{grid-template-columns:1fr}
+  .form .grid{grid-template-columns:1fr}
+  .catalog-grid{grid-template-columns:repeat(2,1fr)}
+  .cards{grid-template-columns:1fr 1fr}
+  .two-col{grid-template-columns:1fr}
+}
+@media (max-width: 520px){
+  .menu{display:none}
+  .catalog-grid{grid-template-columns:1fr}
+  .cards{grid-template-columns:1fr}
+}
