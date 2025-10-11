@@ -99,3 +99,18 @@ if(grid){
     </div>
   `).join('');
 }
+const navToggle = document.getElementById("navToggle");
+const navMobile = document.getElementById("navMobile");
+const navOverlay = document.getElementById("navOverlay");
+
+if (navToggle && navMobile && navOverlay) {
+  navToggle.addEventListener("click", () => {
+    navMobile.classList.toggle("active");
+    navOverlay.classList.toggle("active");
+  });
+
+  navOverlay.addEventListener("click", () => {
+    navMobile.classList.remove("active");
+    navOverlay.classList.remove("active");
+  });
+}
