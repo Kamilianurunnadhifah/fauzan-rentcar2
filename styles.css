@@ -103,6 +103,63 @@ body{
   font-size: 24px;
   cursor: pointer;
 }
+/* --- Mobile Sidebar (nav-mobile) --- */
+.nav-mobile {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 75%;
+  height: 100vh;
+  background: #ffffff;
+  box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
+  transition: right 0.3s ease-in-out;
+  padding: 80px 24px 24px;
+  z-index: 999;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.nav-mobile.active {
+  right: 0;
+}
+
+.nav-mobile button,
+.nav-mobile a {
+  background: none;
+  border: none;
+  text-align: left;
+  font-size: 18px;
+  color: #1e3a8a;
+  cursor: pointer;
+  padding: 10px 0;
+}
+
+.nav-mobile a.btn {
+  background: #1e3a8a;
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+  border-radius: 8px;
+  margin-top: 10px;
+}
+
+/* Overlay gelap saat menu aktif */
+.nav-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 998;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.nav-overlay.active {
+  opacity: 1;
+  pointer-events: all;
+}
+
 
 /* Responsive layout */
 @media (min-width: 960px) {
