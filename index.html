@@ -1,10 +1,7 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-    <link
-    rel="stylesheet"
-    href="https://unpkg.com/swiper/swiper-bundle.min.css"
-  />
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Fauzan Rentcar — Sewa Mobil Pamulang</title>
@@ -15,64 +12,48 @@
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-<!-- Header -->
-<header class="site-header fixed">
-  <div class="container header-inner">
-    <div class="nav-overlay" id="navOverlay"></div>
-    <button class="nav-toggle" id="navToggle" aria-label="Toggle Menu">☰</button>
+  <!-- Header -->
+  <header class="site-header fixed">
+    <div class="container header-inner">
+      <div class="nav-overlay" id="navOverlay"></div>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle Menu">☰</button>
 
+      <!-- Logo -->
+      <div class="brand" onclick="scrollToId('home')">
+        <div class="brand-mark"><i data-feather="car"></i></div>
+        <span class="brand-name">Fauzan Rentcar</span>
+      </div>
 
-    <!-- Logo -->
-    <div class="brand" onclick="scrollToId('home')">
-      <div class="brand-mark"><i data-feather="car"></i></div>
-      <span class="brand-name">Fauzan Rentcar</span>
+      <!-- Desktop Navigation -->
+      <nav class="nav-desktop">
+        <button onclick="scrollToId('home')">Home</button>
+        <button onclick="scrollToId('booking')">Booking</button>
+        <button onclick="scrollToId('catalog')">Katalog Mobil</button>
+        <button onclick="scrollToId('packages')">Paket &amp; Syarat</button>
+        <button onclick="scrollToId('location')">Lokasi</button>
+      </nav>
+
+      <!-- Desktop CTA -->
+      <div class="header-cta">
+        <a class="btn btn-primary" href="https://wa.me/6281511515141" target="_blank" rel="noopener">Hubungi Kami</a>
+      </div>
+
+      <!-- Mobile Menu Button -->
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle Menu">
+        <i data-feather="menu"></i>
+      </button>
     </div>
 
-    <!-- Desktop Navigation -->
-    <nav class="nav-desktop">
+    <!-- Mobile Menu -->
+    <nav class="nav-mobile" id="navMobile">
       <button onclick="scrollToId('home')">Home</button>
       <button onclick="scrollToId('booking')">Booking</button>
       <button onclick="scrollToId('catalog')">Katalog Mobil</button>
       <button onclick="scrollToId('packages')">Paket &amp; Syarat</button>
       <button onclick="scrollToId('location')">Lokasi</button>
+      <a class="btn btn-primary w-full" href="https://wa.me/6281511515141" target="_blank" rel="noopener">Hubungi Kami</a>
     </nav>
-
-    <!-- Desktop CTA -->
-    <div class="header-cta">
-      <a
-        class="btn btn-primary"
-        href="https://wa.me/6281511515141"
-        target="_blank"
-        rel="noopener"
-      >
-        Hubungi Kami
-      </a>
-    </div>
-
-    <!-- Mobile Menu Button -->
-    <button class="nav-toggle" id="navToggle" aria-label="Toggle Menu">
-      <i data-feather="menu"></i>
-    </button>
-  </div>
-
-  <!-- Mobile Menu -->
-  <nav class="nav-mobile" id="navMobile">
-    <button onclick="scrollToId('home')">Home</button>
-    <button onclick="scrollToId('booking')">Booking</button>
-    <button onclick="scrollToId('catalog')">Katalog Mobil</button>
-    <button onclick="scrollToId('packages')">Paket &amp; Syarat</button>
-    <button onclick="scrollToId('location')">Lokasi</button>
-    <a
-      class="btn btn-primary w-full"
-      href="https://wa.me/6281511515141"
-      target="_blank"
-      rel="noopener"
-    >
-      Hubungi Kami
-    </a>
-  </nav>
-</header>
-
+  </header>
 
   <!-- Hero -->
   <section id="home" class="hero">
@@ -88,335 +69,87 @@
     </div>
   </section>
 
-  <!-- Why Choose Us -->
-  <section class="section section-alt">
+  <!-- Catalog (Swiper) -->
+  <section id="mobil">
+    <h2>🚗 Catalog Mobil</h2>
+    <p class="sub">Pilih mobil sesuai kebutuhan Anda. Harga transparan, unit prima, siap jalan.</p>
+
+    <div class="swiper-container">
+      <div class="swiper-wrapper">
+        <!-- Slide 1: Honda Jazz -->
+        <div class="swiper-slide">
+          <img loading="lazy" src="assets/Jazz1.jpg" alt="Honda Jazz - depan" />
+        </div>
+        <div class="swiper-slide">
+          <img loading="lazy" src="assets/Jazz2.jpg" alt="Honda Jazz - samping" />
+        </div>
+        <div class="swiper-slide">
+          <img loading="lazy" src="assets/Jazz3.jpg" alt="Honda Jazz - belakang" />
+        </div>
+      </div>
+
+      <!-- Pagination, Next and Prev buttons -->
+      <div class="swiper-pagination"></div>
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+    </div>
+
+    <div class="card-body">
+      <h3>Honda Jazz RS</h3>
+      <div class="price">
+        <span class="pill">Harian Rp450.000</span>
+        <span class="pill">Mingguan Rp3.000.000</span>
+        <span class="pill">Bulanan Rp11.000.000</span>
+      </div>
+      <a class="btn-sewa" href="https://wa.me/6281511515141?text=Halo%20Fauzan%20Rentcar%2C%20saya%20ingin%20sewa%20Honda%20Jazz" target="_blank" rel="noopener">Sewa Sekarang</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer-modern">
     <div class="container">
-      <h2 class="section-title">Mengapa Memilih Kami</h2>
-      <div class="grid grid-3">
-        <div class="card feature">
-          <div class="icon">🚘</div>
-          <h3>Unit Terawat</h3>
-          <p>Mobil bersih, siap jalan setiap hari.</p>
+      <div class="footer-grid">
+        <!-- Brand -->
+        <div>
+          <div class="footer-brand">
+            <div class="footer-icon">🚗</div>
+            <span class="footer-brand-name">Fauzan Rentcar</span>
+          </div>
+          <p class="footer-desc">
+            Layanan rental mobil terpercaya di Pamulang dan sekitarnya.
+          </p>
         </div>
-        <div class="card feature">
-          <div class="icon">🧑‍✈️</div>
-          <h3>Sopir Profesional</h3>
-          <p>Ramah dan berpengalaman di area Jabodetabek.</p>
+
+        <!-- Contact -->
+        <div>
+          <h4 class="footer-title">Kontak</h4>
+          <ul class="footer-contact">
+            <li>📍 Pamulang, Tangerang Selatan</li>
+            <li>📞 <a href="https://wa.me/6281511515141" target="_blank" rel="noopener">WhatsApp: +62 815-1151-5141</a></li>
+            <li>📷 <a href="https://instagram.com/fauzanrentcar" target="_blank" rel="noopener">@fauzanrentcar</a></li>
+          </ul>
         </div>
-        <div class="card feature">
-          <div class="icon">💳</div>
-          <h3>Harga Bersahabat</h3>
-          <p>Pilihan paket sesuai kebutuhan.</p>
-        </div>
-      </div>
-    </div>
-  </section>
 
-  <!-- CTA Banner -->
-  <section class="cta">
-    <div class="container cta-inner">
-      <div>
-        <h2>Rencanakan perjalananmu sekarang bersama Fauzan Rentcar!</h2>
-        <p>Hubungi kami via WhatsApp untuk booking cepat dan mudah.</p>
-      </div>
-      <a class="btn btn-light" target="_blank" rel="noopener" href="https://wa.me/6281511515141">Hubungi via WhatsApp</a>
-    </div>
-  </section>
-
-  <!-- Booking Form -->
-  <section id="booking" class="section">
-    <div class="container narrow">
-      <h2 class="section-title">Booking Sekarang</h2>
-      <p class="section-desc">Isi formulir di bawah ini, kami akan menghubungi Anda via WhatsApp.</p>
-      <div class="card">
-        <form id="bookingForm" class="form">
-          <div class="form-row">
-            <label for="name">Nama Lengkap</label>
-            <input id="name" name="name" type="text" placeholder="Nama lengkap" required />
+        <!-- Quick Links -->
+        <div>
+          <h4 class="footer-title">Menu Cepat</h4>
+          <div class="footer-links">
+            <button onclick="scrollToId('home')">Home</button>
+            <button onclick="scrollToId('booking')">Booking</button>
+            <button onclick="scrollToId('catalog')">Katalog Mobil</button>
+            <button onclick="scrollToId('packages')">Paket &amp; Syarat</button>
+            <button onclick="scrollToId('location')">Lokasi</button>
           </div>
-          <div class="form-row">
-            <label for="startDate">Tanggal Mulai</label>
-            <input id="startDate" name="startDate" type="date" required />
-          </div>
-          <div class="form-row">
-            <label for="destination">Tujuan Pemakaian</label>
-            <input id="destination" name="destination" type="text" placeholder="Contoh: wisata keluarga, acara kantor, dll" required />
-          </div>
-          <div class="form-row">
-            <label for="duration">Lama Sewa</label>
-            <select id="duration" name="duration" required>
-              <option value="">Pilih lama sewa</option>
-              <option>Harian</option>
-              <option>Mingguan</option>
-              <option>Bulanan</option>
-            </select>
-          </div>
-          <div class="form-row">
-            <label for="carType">Pilihan Mobil</label>
-            <select id="carType" name="carType" required>
-              <option value="">Pilih tipe mobil</option>
-              <option>Toyota Avanza</option>
-              <option>Honda Brio</option>
-              <option>Daihatsu Xenia</option>
-              <option>Toyota Innova</option>
-            </select>
-          </div>
-          <button class="btn btn-primary btn-lg" type="submit">Kirim ke WhatsApp</button>
-        </form>
-      </div>
-    </div>
-  </section>
-
-<!-- CATALOG (SWIPER) -->
-<section id="mobil">
-  <h2>🚗 Catalog Mobil</h2>
-  <p class="sub">Pilih mobil sesuai kebutuhan Anda. Harga transparan, unit prima, siap jalan.</p>
-  
-  <!-- Swiper Container -->
-  <div class="swiper-container">
-    <!-- Swiper Wrapper -->
-    <div class="swiper-wrapper">
-      <!-- Slide 1: Honda Jazz -->
-      <div class="swiper-slide">
-        <img loading="lazy" src="assets/Jazz1.jpg" alt="Honda Jazz - depan" />
-      </div>
-      <div class="swiper-slide">
-        <img loading="lazy" src="assets/Jazz2.jpg" alt="Honda Jazz - samping" />
-      </div>
-      <div class="swiper-slide">
-        <img loading="lazy" src="assets/Jazz3.jpg" alt="Honda Jazz - belakang" />
-      </div>
-    </div>
-
-    <!-- Pagination, Next and Prev buttons -->
-    <div class="swiper-pagination"></div>
-    <div class="swiper-button-next"></div>
-    <div class="swiper-button-prev"></div>
-  </div>
-
-  <div class="card-body">
-    <h3>Honda Jazz RS</h3>
-    <div class="price">
-      <span class="pill">Harian Rp450.000</span>
-      <span class="pill">Mingguan Rp3.000.000</span>
-      <span class="pill">Bulanan Rp11.000.000</span>
-    </div>
-    <a class="btn-sewa" href="https://wa.me/6281511515141?text=Halo%20Fauzan%20Rentcar%2C%20saya%20ingin%20sewa%20Honda%20Jazz" target="_blank" rel="noopener">Sewa Sekarang</a>
-  </div>
-</section>
-
-
-  <!-- Packages & Terms (Accordion) -->
-  <section id="packages" class="section">
-    <div class="container narrow">
-      <h2 class="section-title">Informasi Paket &amp; Syarat</h2>
-      <p class="section-desc">Pilih paket yang sesuai dengan kebutuhan Anda.</p>
-
-      <div class="accordion">
-        <details>
-          <summary>
-            <div class="summary-left">📅</div>
-            <div class="summary-right">
-              <h3>Sewa Harian</h3>
-              <span>Fleksibel, cocok untuk kebutuhan singkat.</span>
-            </div>
-          </summary>
-          <div class="accordion-body">
-            <ul>
-              <li>24 jam</li>
-              <li>Lepas kunci / sopir</li>
-            </ul>
-          </div>
-        </details>
-
-        <details>
-          <summary>
-            <div class="summary-left">🕒</div>
-            <div class="summary-right">
-              <h3>Sewa Mingguan</h3>
-              <span>Lebih hemat dari harian.</span>
-            </div>
-          </summary>
-          <div class="accordion-body">
-            <ul>
-              <li>Diskon khusus</li>
-              <li>Free antar*</li>
-            </ul>
-          </div>
-        </details>
-
-        <details>
-          <summary>
-            <div class="summary-left">📆</div>
-            <div class="summary-right">
-              <h3>Sewa Bulanan</h3>
-              <span>Paling ekonomis untuk jangka panjang.</span>
-            </div>
-          </summary>
-          <div class="accordion-body">
-            <ul>
-              <li>Perawatan rutin</li>
-              <li>Support korporat</li>
-            </ul>
-          </div>
-        </details>
-
-        <details>
-          <summary>
-            <div class="summary-left">👨‍✈️</div>
-            <div class="summary-right">
-              <h3>Dengan Sopir</h3>
-              <span>Nyaman &amp; aman dengan sopir berpengalaman.</span>
-            </div>
-          </summary>
-          <div class="accordion-body"><p>Tersedia untuk area Jabodetabek.</p></div>
-        </details>
-
-        <details>
-          <summary>
-            <div class="summary-left">🔑</div>
-            <div class="summary-right">
-              <h3>Lepas Kunci</h3>
-              <span>Syarat mudah dan proses cepat.</span>
-            </div>
-          </summary>
-          <div class="accordion-body"><p>Unit siap pakai, fleksibel untuk aktivitas Anda.</p></div>
-        </details>
-
-        <details>
-          <summary>
-            <div class="summary-left">📄</div>
-            <div class="summary-right">
-              <h3>Syarat &amp; Ketentuan</h3>
-              <span>Mohon dibaca sebelum melakukan pemesanan.</span>
-            </div>
-          </summary>
-          <div class="accordion-body">
-            <ul>
-              <li>WNI: KTP + SIM A (aktif)</li>
-              <li>WNA: Paspor + SIM Internasional</li>
-              <li>Deposit/jaminan (dikembalikan saat unit kembali sesuai ketentuan)</li>
-              <li>Pelanggaran lalu lintas menjadi tanggung jawab penyewa</li>
-              <li>Dilarang digunakan untuk kegiatan ilegal/berbahaya</li>
-            </ul>
-          </div>
-        </details>
-      </div>
-    </div>
-  </section>
-
-  <!-- Location & About -->
-<!-- Lokasi & Tentang Kami -->
-<section id="location" class="location-section">
-  <div class="container">
-    <h2 class="section-title text-center">Lokasi &amp; Tentang Kami</h2>
-
-    <div class="location-grid">
-      <!-- Map -->
-      <div class="map-container">
-        <iframe
-          title="Peta Pamulang"
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63446.84943822934!2d106.70586!3d-6.3422!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69e55c67066c2f%3A0x5030bfbca830b00!2sPamulang%2C%20South%20Tangerang%20City%2C%20Banten!5e0!3m2!1sen!2sid!4v1234567890"
-          width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade">
-        </iframe>
-      </div>
-
-      <!-- About -->
-      <div class="about-box">
-        <h3 class="about-title">Tentang Kami</h3>
-        <p>
-          Fauzan Rentcar adalah layanan rental mobil terpercaya di Pamulang dan sekitarnya.
-          Kami menyediakan berbagai jenis mobil dengan kondisi prima, siap menemani perjalanan
-          bisnis, keluarga, maupun liburan Anda.
-        </p>
-        <p>
-          Komitmen kami adalah memberikan pengalaman sewa mobil yang nyaman, cepat, dan aman —
-          dengan harga yang bersahabat.
-        </p>
-      </div>
-    </div>
-
-    <!-- Gallery -->
-<!-- Galeri Kami -->
-<div class="gallery-section">
-  <h3 class="gallery-title text-center">Galeri Kami</h3>
-  <div class="gallery-grid">
-    <div class="gallery-item">
-      <img src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?auto=format&fit=crop&w=800&q=60" alt="Galeri 1" />
-    </div>
-    <div class="gallery-item">
-      <img src="https://images.unsplash.com/photo-1502877338535-766e1452684a?auto=format&fit=crop&w=800&q=60" alt="Galeri 2" />
-    </div>
-    <div class="gallery-item">
-      <img src="https://images.unsplash.com/photo-1618906792589-bb61e8e30cf8?auto=format&fit=crop&w=800&q=60" alt="Galeri 3" />
-    </div>
-    <div class="gallery-item">
-      <img src="https://images.unsplash.com/photo-1570129477492-45c003edd2be?auto=format&fit=crop&w=800&q=60" alt="Galeri 4" />
-    </div>
-  </div>
-</div>
-
-
-
-<!-- Footer -->
-<footer class="footer-modern">
-  <div class="container">
-    <div class="footer-grid">
-      <!-- Brand -->
-      <div>
-        <div class="footer-brand">
-          <div class="footer-icon">
-            🚗
-          </div>
-          <span class="footer-brand-name">Fauzan Rentcar</span>
-        </div>
-        <p class="footer-desc">
-          Layanan rental mobil terpercaya di Pamulang dan sekitarnya.
-        </p>
-      </div>
-
-      <!-- Contact -->
-      <div>
-        <h4 class="footer-title">Kontak</h4>
-        <ul class="footer-contact">
-          <li>
-            📍 Pamulang, Tangerang Selatan
-          </li>
-          <li>
-            📞 <a href="https://wa.me/6281511515141" target="_blank" rel="noopener">
-              WhatsApp: +62 815-1151-5141
-            </a>
-          </li>
-          <li>
-            📷 <a href="https://instagram.com/fauzanrentcar" target="_blank" rel="noopener">
-              @fauzanrentcar
-            </a>
-          </li>
-        </ul>
-      </div>
-
-      <!-- Quick Links -->
-      <div>
-        <h4 class="footer-title">Menu Cepat</h4>
-        <div class="footer-links">
-          <button onclick="scrollToId('home')">Home</button>
-          <button onclick="scrollToId('booking')">Booking</button>
-          <button onclick="scrollToId('catalog')">Katalog Mobil</button>
-          <button onclick="scrollToId('packages')">Paket &amp; Syarat</button>
-          <button onclick="scrollToId('location')">Lokasi</button>
         </div>
       </div>
-    </div>
 
-    <div class="footer-copy">
-      © 2025 Fauzan Rentcar. All rights reserved.
+      <div class="footer-copy">
+        © 2025 Fauzan Rentcar. All rights reserved.
+      </div>
     </div>
-  </div>
-</footer>
-
+  </footer>
 
   <script src="script.js" defer></script>
-     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 </body>
 </html>
