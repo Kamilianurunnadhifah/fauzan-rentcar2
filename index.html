@@ -167,14 +167,44 @@
     </div>
   </section>
 
-  <!-- Catalog -->
-  <section id="catalog" class="section section-alt">
-    <div class="container">
-      <h2 class="section-title">Katalog Mobil</h2>
-      <p class="section-desc">Pilih mobil sesuai kebutuhan Anda.</p>
-      <div id="catalogGrid" class="grid grid-4"></div>
+<!-- CATALOG (SWIPER) -->
+<section id="mobil">
+  <h2>🚗 Catalog Mobil</h2>
+  <p class="sub">Pilih mobil sesuai kebutuhan Anda. Harga transparan, unit prima, siap jalan.</p>
+  
+  <!-- Swiper Container -->
+  <div class="swiper-container">
+    <!-- Swiper Wrapper -->
+    <div class="swiper-wrapper">
+      <!-- Slide 1: Honda Jazz -->
+      <div class="swiper-slide">
+        <img loading="lazy" src="assets/Jazz1.jpg" alt="Honda Jazz - depan" />
+      </div>
+      <div class="swiper-slide">
+        <img loading="lazy" src="assets/Jazz2.jpg" alt="Honda Jazz - samping" />
+      </div>
+      <div class="swiper-slide">
+        <img loading="lazy" src="assets/Jazz3.jpg" alt="Honda Jazz - belakang" />
+      </div>
     </div>
-  </section>
+
+    <!-- Pagination, Next and Prev buttons -->
+    <div class="swiper-pagination"></div>
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+  </div>
+
+  <div class="card-body">
+    <h3>Honda Jazz RS</h3>
+    <div class="price">
+      <span class="pill">Harian Rp450.000</span>
+      <span class="pill">Mingguan Rp3.000.000</span>
+      <span class="pill">Bulanan Rp11.000.000</span>
+    </div>
+    <a class="btn-sewa" href="https://wa.me/6281511515141?text=Halo%20Fauzan%20Rentcar%2C%20saya%20ingin%20sewa%20Honda%20Jazz" target="_blank" rel="noopener">Sewa Sekarang</a>
+  </div>
+</section>
+
 
   <!-- Packages & Terms (Accordion) -->
   <section id="packages" class="section">
