@@ -1,0 +1,9 @@
+
+body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #fff; color: #111; }
+header { background: #1E40AF; color: white; padding: 2rem; text-align: center; }
+h1 { margin: 0; font-size: 2rem; }
+main { padding: 2rem; }
+section { margin-bottom: 2rem; }
+button { background: #1E40AF; color: white; padding: 0.75rem 1.5rem; border: none; border-radius: 5px; cursor: pointer; }
+button:hover { background: #3B82F6; }
+footer { background: #1E3A8A; color: white; text-align: center; padding: 1rem; }
