@@ -1,14 +1,16 @@
 // Smooth scroll helper
-function scrollToId(id){
+function scrollToId(id) {
   const el = document.getElementById(id);
-  if(el){ el.scrollIntoView({behavior:'smooth'}); }
+  if (el) {
+    el.scrollIntoView({ behavior: 'smooth' });
+  }
 }
 
 // Mobile nav
 const navToggle = document.getElementById('navToggle');
 const navMobile = document.getElementById('navMobile');
-if(navToggle && navMobile){
-  navToggle.addEventListener('click', ()=>{
+if (navToggle && navMobile) {
+  navToggle.addEventListener('click', () => {
     navMobile.style.display = navMobile.style.display === 'block' ? 'none' : 'block';
   });
 }
@@ -29,8 +31,8 @@ if (navToggleBtn && navMobileMenu) {
 
 // Booking form -> WhatsApp
 const bookingForm = document.getElementById('bookingForm');
-if(bookingForm){
-  bookingForm.addEventListener('submit', (e)=>{
+if (bookingForm) {
+  bookingForm.addEventListener('submit', (e) => {
     e.preventDefault();
     const fd = new FormData(bookingForm);
     const data = Object.fromEntries(fd.entries());
@@ -46,6 +48,29 @@ if(bookingForm){
     window.open(wa, '_blank');
   });
 }
+
+// Swiper Initialization for Catalog
+const swiper = new Swiper('.swiper-container', {
+  slidesPerView: 1,
+  spaceBetween: 10,
+  loop: true,
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true,
+  },
+  breakpoints: {
+    768: {
+      slidesPerView: 2, // Show two slides on medium screens
+    },
+    1024: {
+      slidesPerView: 3, // Show three slides on larger screens
+    }
+  }
+});
 
 // Catalog data
 const cars = [
@@ -81,7 +106,7 @@ const cars = [
 
 // Render catalog
 const grid = document.getElementById('catalogGrid');
-if(grid){
+if (grid) {
   grid.innerHTML = cars.map(car => `
     <div class="catalog-card">
       <div class="img-wrap">
@@ -98,19 +123,4 @@ if(grid){
       </div>
     </div>
   `).join('');
-}
-const navToggle = document.getElementById("navToggle");
-const navMobile = document.getElementById("navMobile");
-const navOverlay = document.getElementById("navOverlay");
-
-if (navToggle && navMobile && navOverlay) {
-  navToggle.addEventListener("click", () => {
-    navMobile.classList.toggle("active");
-    navOverlay.classList.toggle("active");
-  });
-
-  navOverlay.addEventListener("click", () => {
-    navMobile.classList.remove("active");
-    navOverlay.classList.remove("active");
-  });
 }
