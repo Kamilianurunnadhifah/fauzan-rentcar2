@@ -5,9 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Fauzan Rentcar — Sewa Mobil Pamulang</title>
   <meta name="description" content="Sewa mobil harian, mingguan, bulanan area Pamulang dan sekitarnya. Unit terawat, sopir berpengalaman, harga bersahabat.">
+
+  <!-- Font & Style -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
@@ -15,13 +21,11 @@
 <!-- Header -->
 <header class="site-header fixed">
   <div class="container header-inner">
-    <!-- Logo -->
-      <div class="brand" onclick="scrollToId('home')">
-        <div class="brand-mark">🚗</div>
-        <span class="brand-name">Fauzan Rentcar</span>
+    <div class="brand" onclick="scrollToId('home')">
+      <div class="brand-mark">🚗</div>
+      <span class="brand-name">Fauzan Rentcar</span>
     </div>
 
-    <!-- Desktop Navigation -->
     <nav class="nav-desktop">
       <button onclick="scrollToId('home')">Home</button>
       <button onclick="scrollToId('booking')">Booking</button>
@@ -30,98 +34,83 @@
       <button onclick="scrollToId('location')">Lokasi</button>
     </nav>
 
-    <!-- Desktop CTA -->
     <div class="header-cta">
-      <a
-        class="btn btn-primary"
-        href="https://wa.me/6281511515141"
-        target="_blank"
-        rel="noopener"
-      >
+      <a class="btn btn-primary" href="https://wa.me/6281511515141" target="_blank" rel="noopener">
         Hubungi Kami
       </a>
     </div>
 
-    <!-- Mobile Menu Button -->
     <button class="nav-toggle" id="navToggle" aria-label="Toggle Menu">
       <i data-feather="menu"></i>
     </button>
   </div>
 
-  <!-- Mobile Menu -->
   <nav class="nav-mobile" id="navMobile">
     <button onclick="scrollToId('home')">Home</button>
     <button onclick="scrollToId('booking')">Booking</button>
     <button onclick="scrollToId('catalog')">Katalog Mobil</button>
     <button onclick="scrollToId('packages')">Paket &amp; Syarat</button>
     <button onclick="scrollToId('location')">Lokasi</button>
-    <a
-      class="btn btn-primary w-full"
-      href="https://wa.me/6281511515141"
-      target="_blank"
-      rel="noopener"
-    >
+    <a class="btn btn-primary w-full" href="https://wa.me/6281511515141" target="_blank" rel="noopener">
       Hubungi Kami
     </a>
   </nav>
 </header>
 
-  <!-- Hero -->
-  <section id="home" class="hero">
-    <img class="hero-bg" src="https://images.unsplash.com/photo-1715398424441-30b03f114b68?auto=format&fit=crop&w=1600&q=60" alt="Mobil modern di perkotaan" />
-    <div class="hero-overlay"></div>
-    <div class="container hero-content">
-      <h1>Fauzan Rentcar — Sewa Mobil Terpercaya di Pamulang</h1>
-      <p>Sewa mobil harian, mingguan, atau bulanan dengan harga bersahabat. Unit bersih, sopir berpengalaman, dan pelayanan cepat.</p>
-      <div class="hero-actions">
-        <button class="btn btn-accent" onclick="scrollToId('booking')">Booking Sekarang</button>
-        <button class="btn btn-outline" onclick="scrollToId('catalog')">Lihat Katalog Mobil</button>
+<!-- Hero -->
+<section id="home" class="hero">
+  <img class="hero-bg" src="https://images.unsplash.com/photo-1715398424441-30b03f114b68?auto=format&fit=crop&w=1600&q=60" alt="Mobil modern di perkotaan" />
+  <div class="hero-overlay"></div>
+  <div class="container hero-content">
+    <h1>Fauzan Rentcar — Sewa Mobil Terpercaya di Pamulang</h1>
+    <p>Sewa mobil harian, mingguan, atau bulanan dengan harga bersahabat. Unit bersih, sopir berpengalaman, dan pelayanan cepat.</p>
+    <div class="hero-actions">
+      <button class="btn btn-accent" onclick="scrollToId('booking')">Booking Sekarang</button>
+      <button class="btn btn-outline" onclick="scrollToId('catalog')">Lihat Katalog Mobil</button>
+    </div>
+  </div>
+</section>
+
+<!-- Why Choose Us -->
+<section class="section section-alt">
+  <div class="container">
+    <h2 class="section-title">Mengapa Memilih Kami</h2>
+    <div class="grid grid-3">
+      <div class="card feature">
+        <div class="icon">🚘</div>
+        <h3>Unit Terawat</h3>
+        <p>Mobil bersih, siap jalan setiap hari.</p>
+      </div>
+      <div class="card feature">
+        <div class="icon">🧑‍✈️</div>
+        <h3>Sopir Profesional</h3>
+        <p>Ramah dan berpengalaman di area Jabodetabek.</p>
+      </div>
+      <div class="card feature">
+        <div class="icon">💳</div>
+        <h3>Harga Bersahabat</h3>
+        <p>Pilihan paket sesuai kebutuhan.</p>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- Why Choose Us -->
-  <section class="section section-alt">
-    <div class="container">
-      <h2 class="section-title">Mengapa Memilih Kami</h2>
-      <div class="grid grid-3">
-        <div class="card feature">
-          <div class="icon">🚘</div>
-          <h3>Unit Terawat</h3>
-          <p>Mobil bersih, siap jalan setiap hari.</p>
-        </div>
-        <div class="card feature">
-          <div class="icon">🧑‍✈️</div>
-          <h3>Sopir Profesional</h3>
-          <p>Ramah dan berpengalaman di area Jabodetabek.</p>
-        </div>
-        <div class="card feature">
-          <div class="icon">💳</div>
-          <h3>Harga Bersahabat</h3>
-          <p>Pilihan paket sesuai kebutuhan.</p>
-        </div>
-      </div>
+<!-- CTA -->
+<section class="cta">
+  <div class="container cta-inner">
+    <div>
+      <h2>Rencanakan perjalananmu sekarang bersama Fauzan Rentcar!</h2>
+      <p>Hubungi kami via WhatsApp untuk booking cepat dan mudah.</p>
     </div>
-  </section>
+    <a class="btn btn-light" target="_blank" rel="noopener" href="https://wa.me/6281511515141">Hubungi via WhatsApp</a>
+  </div>
+</section>
 
-  <!-- CTA Banner -->
-  <section class="cta">
-    <div class="container cta-inner">
-      <div>
-        <h2>Rencanakan perjalananmu sekarang bersama Fauzan Rentcar!</h2>
-        <p>Hubungi kami via WhatsApp untuk booking cepat dan mudah.</p>
-      </div>
-      <a class="btn btn-light" target="_blank" rel="noopener" href="https://wa.me/6281511515141">Hubungi via WhatsApp</a>
-    </div>
-  </section>
-
-  <!-- Booking Form -->
-  <section id="booking" class="section">
+<!-- Booking Form -->
+<section id="booking" class="section">
   <div class="container narrow">
     <h2 class="section-title">Booking Sekarang</h2>
-    <p class="section-desc">
-      Isi formulir di bawah ini, kami akan menghubungi Anda via WhatsApp.
-    </p>
+    <p class="section-desc">Isi formulir di bawah ini, kami akan menghubungi Anda via WhatsApp.</p>
 
     <div class="card">
       <form id="bookingForm" class="form">
@@ -129,17 +118,14 @@
           <label for="name">Nama Lengkap</label>
           <input id="name" name="name" type="text" placeholder="Masukkan nama lengkap" required />
         </div>
-
         <div class="form-row">
           <label for="startDate">Tanggal Mulai</label>
           <input id="startDate" name="startDate" type="date" placeholder="dd/mm/yyyy" required />
         </div>
-
         <div class="form-row">
           <label for="destination">Tujuan Pemakaian</label>
           <input id="destination" name="destination" type="text" placeholder="Contoh: Wisata keluarga, Acara kantor, dll" required />
         </div>
-
         <div class="form-row">
           <label for="duration">Lama Sewa</label>
           <select id="duration" name="duration" required>
@@ -149,7 +135,6 @@
             <option>Bulanan</option>
           </select>
         </div>
-
         <div class="form-row">
           <label for="carType">Pilihan Mobil</label>
           <select id="carType" name="carType" required>
@@ -160,203 +145,78 @@
             <option>Toyota Innova</option>
           </select>
         </div>
-
         <button class="btn btn-primary btn-lg" type="submit">Kirim ke WhatsApp</button>
       </form>
     </div>
   </div>
 </section>
 
-  <!-- Catalog -->
-  <section id="catalog" class="section section-alt">
-    <div class="container">
-      <h2 class="section-title">Katalog Mobil</h2>
-      <p class="section-desc">Pilih mobil sesuai kebutuhan Anda.</p>
-      <div id="catalogGrid" class="grid grid-4"></div>
-    </div>
-  </section>
-
-  <!-- Packages & Terms (Accordion) -->
-  <section id="packages" class="section">
-    <div class="container narrow">
-      <h2 class="section-title">Informasi Paket &amp; Syarat</h2>
-      <p class="section-desc">Pilih paket yang sesuai dengan kebutuhan Anda.</p>
-
-      <div class="accordion">
-        <details>
-          <summary>
-            <div class="summary-left">📅</div>
-            <div class="summary-right">
-              <h3>Sewa Harian</h3>
-              <span>Fleksibel, cocok untuk kebutuhan singkat.</span>
-            </div>
-          </summary>
-          <div class="accordion-body">
-            <ul>
-              <li>24 jam</li>
-              <li>Lepas kunci / sopir</li>
-            </ul>
-          </div>
-        </details>
-
-        <details>
-          <summary>
-            <div class="summary-left">🕒</div>
-            <div class="summary-right">
-              <h3>Sewa Mingguan</h3>
-              <span>Lebih hemat dari harian.</span>
-            </div>
-          </summary>
-          <div class="accordion-body">
-            <ul>
-              <li>Diskon khusus</li>
-              <li>Free antar*</li>
-            </ul>
-          </div>
-        </details>
-
-        <details>
-          <summary>
-            <div class="summary-left">📆</div>
-            <div class="summary-right">
-              <h3>Sewa Bulanan</h3>
-              <span>Paling ekonomis untuk jangka panjang.</span>
-            </div>
-          </summary>
-          <div class="accordion-body">
-            <ul>
-              <li>Perawatan rutin</li>
-              <li>Support korporat</li>
-            </ul>
-          </div>
-        </details>
-
-        <details>
-          <summary>
-            <div class="summary-left">👨‍✈️</div>
-            <div class="summary-right">
-              <h3>Dengan Sopir</h3>
-              <span>Nyaman &amp; aman dengan sopir berpengalaman.</span>
-            </div>
-          </summary>
-          <div class="accordion-body"><p>Tersedia untuk area Jabodetabek.</p></div>
-        </details>
-
-        <details>
-          <summary>
-            <div class="summary-left">🔑</div>
-            <div class="summary-right">
-              <h3>Lepas Kunci</h3>
-              <span>Syarat mudah dan proses cepat.</span>
-            </div>
-          </summary>
-          <div class="accordion-body"><p>Unit siap pakai, fleksibel untuk aktivitas Anda.</p></div>
-        </details>
-
-        <details>
-          <summary>
-            <div class="summary-left">📄</div>
-            <div class="summary-right">
-              <h3>Syarat &amp; Ketentuan</h3>
-              <span>Mohon dibaca sebelum melakukan pemesanan.</span>
-            </div>
-          </summary>
-          <div class="accordion-body">
-            <ul>
-              <li>WNI: KTP + SIM A (aktif)</li>
-              <li>WNA: Paspor + SIM Internasional</li>
-              <li>Deposit/jaminan (dikembalikan saat unit kembali sesuai ketentuan)</li>
-              <li>Pelanggaran lalu lintas menjadi tanggung jawab penyewa</li>
-              <li>Dilarang digunakan untuk kegiatan ilegal/berbahaya</li>
-            </ul>
-          </div>
-        </details>
-      </div>
-    </div>
-  </section>
+<!-- Catalog -->
+<section id="catalog" class="section section-alt">
+  <div class="container">
+    <h2 class="section-title">Katalog Mobil</h2>
+    <p class="section-desc">Pilih mobil sesuai kebutuhan Anda.</p>
+    <div id="catalogGrid" class="grid grid-4"></div>
+  </div>
+</section>
 
 <!-- Lokasi & Tentang Kami -->
 <section id="location" class="section section-alt">
   <div class="container">
     <h2 class="section-title">Lokasi &amp; Tentang Kami</h2>
 
-    <!-- Map + Tentang Kami -->
     <div class="grid grid-2 gap-lg align-start">
       <div class="card map-card">
         <iframe
           title="Peta Pamulang"
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63446.84943822934!2d106.70586!3d-6.3422!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69e55c67066c2f%3A0x5030bfbca830b00!2sPamulang%2C%20South%20Tangerang%20City%2C%20Banten!5e0!3m2!1sid!2sid!4v1234567890"
-          width="100%"
-          height="100%"
-          style="border:0;"
-          loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade"
-          allowfullscreen>
+          width="100%" height="100%" style="border:0;" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen>
         </iframe>
       </div>
 
       <div class="about">
         <h3>Tentang Kami</h3>
-        <p>
-          Fauzan Rentcar adalah layanan rental mobil terpercaya di Pamulang dan sekitarnya.
-          Kami menyediakan berbagai jenis mobil dengan kondisi prima, siap menemani perjalanan
-          bisnis, keluarga, maupun liburan Anda.
-        </p>
-        <p>
-          Komitmen kami adalah memberikan pengalaman sewa mobil yang nyaman, cepat, dan aman —
-          dengan harga yang bersahabat.
-        </p>
-      </div>
-    </div>
-
-    <!-- Galeri di bawah -->
-    
-    <div class="gallery-section">
-      <h3>Galeri Kami</h3>
-      <div class="gallery">
-        
-        <img src="https://images.unsplash.com/photo-1532964821867-98851c797461?auto=format&fit=crop&w=600&q=60" alt="Galeri 1" />
-        <img src="https://images.unsplash.com/photo-1715398424441-30b03f114b68?auto=format&fit=crop&w=600&q=60" alt="Galeri 2" />
-        <img src="https://images.unsplash.com/photo-1647240907605-2fe56a071bed?auto=format&fit=crop&w=600&q=60" alt="Galeri 3" />
-        <img src="https://images.unsplash.com/photo-1562168672-108c590d2e63?auto=format&fit=crop&w=600&q=60" alt="Galeri 4" />
+        <p>Fauzan Rentcar adalah layanan rental mobil terpercaya di Pamulang dan sekitarnya. Kami menyediakan berbagai jenis mobil dengan kondisi prima, siap menemani perjalanan bisnis, keluarga, maupun liburan Anda.</p>
+        <p>Komitmen kami adalah memberikan pengalaman sewa mobil yang nyaman, cepat, dan aman — dengan harga yang bersahabat.</p>
       </div>
     </div>
   </div>
 </section>
 
-
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="container footer-grid">
-      <div>
-        <div class="brand brand-footer">
-          <div class="brand-mark brand-mark--light">🚗</div>
-          <span>Fauzan Rentcar</span>
-        </div>
-        <p class="muted">Layanan rental mobil terpercaya di Pamulang dan sekitarnya.</p>
+<!-- Footer -->
+<footer class="footer">
+  <div class="container footer-grid">
+    <div>
+      <div class="brand brand-footer">
+        <div class="brand-mark brand-mark--light">🚗</div>
+        <span>Fauzan Rentcar</span>
       </div>
-      <div>
-        <h4>Kontak</h4>
-        <ul class="muted">
-          <li>📍 Pamulang, Tangerang Selatan</li>
-          <li>📞 <a href="https://wa.me/6281511515141" target="_blank" rel="noopener">WhatsApp: +62 815-1151-5141</a></li>
-          <li>📷 <a href="https://instagram.com/fauzanrentcar" target="_blank" rel="noopener">@fauzanrentcar</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4>Menu Cepat</h4>
-        <div class="quick-links">
-          <button onclick="scrollToId('home')">Home</button>
-          <button onclick="scrollToId('booking')">Booking</button>
-          <button onclick="scrollToId('catalog')">Katalog Mobil</button>
-          <button onclick="scrollToId('packages')">Paket &amp; Syarat</button>
-          <button onclick="scrollToId('location')">Lokasi</button>
-        </div>
+      <p class="muted">Layanan rental mobil terpercaya di Pamulang dan sekitarnya.</p>
+    </div>
+    <div>
+      <h4>Kontak</h4>
+      <ul class="muted">
+        <li>📍 Pamulang, Tangerang Selatan</li>
+        <li>📞 <a href="https://wa.me/6281511515141" target="_blank">WhatsApp: +62 815-1151-5141</a></li>
+        <li>📷 <a href="https://instagram.com/fauzanrentcar" target="_blank">@fauzanrentcar</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Menu Cepat</h4>
+      <div class="quick-links">
+        <button onclick="scrollToId('home')">Home</button>
+        <button onclick="scrollToId('booking')">Booking</button>
+        <button onclick="scrollToId('catalog')">Katalog Mobil</button>
+        <button onclick="scrollToId('packages')">Paket &amp; Syarat</button>
+        <button onclick="scrollToId('location')">Lokasi</button>
       </div>
     </div>
-    <div class="copyright">© 2025 Fauzan Rentcar. All rights reserved.</div>
-  </footer>
+  </div>
+  <div class="copyright">© 2025 Fauzan Rentcar. All rights reserved.</div>
+</footer>
 
-  <script src="script.js" defer></script>
+<!-- Swiper JS -->
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script src="script.js" defer></script>
 </body>
 </html>
