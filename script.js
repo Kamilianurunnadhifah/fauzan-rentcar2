@@ -13,6 +13,20 @@ if(navToggle && navMobile){
   });
 }
 
+// Modern header toggle & icon change
+const navToggleBtn = document.getElementById('navToggle');
+const navMobileMenu = document.getElementById('navMobile');
+
+if (navToggleBtn && navMobileMenu) {
+  navToggleBtn.addEventListener('click', () => {
+    const isOpen = navMobileMenu.classList.toggle('show');
+    navToggleBtn.innerHTML = isOpen
+      ? '<i data-feather="x"></i>'
+      : '<i data-feather="menu"></i>';
+    if (window.feather) feather.replace();
+  });
+}
+
 // Booking form -> WhatsApp
 const bookingForm = document.getElementById('bookingForm');
 if(bookingForm){
