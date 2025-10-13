@@ -11,35 +11,60 @@
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  
+
 <!-- Header -->
-  <header class="site-header" id="top">
-    <div class="container header-inner">
-      <div class="brand" onclick="scrollToId('home')">
-        <div class="brand-mark">🚗</div>
-        <span class="brand-name">Fauzan Rentcar</span>
-      </div>
-      <nav class="nav-desktop">
-        <button class="nav-link" onclick="scrollToId('home')">Home</button>
-        <button class="nav-link" onclick="scrollToId('booking')">Booking</button>
-        <button class="nav-link" onclick="scrollToId('catalog')">Katalog Mobil</button>
-        <button class="nav-link" onclick="scrollToId('packages')">Paket &amp; Syarat</button>
-        <button class="nav-link" onclick="scrollToId('location')">Lokasi</button>
-      </nav>
-      <div class="header-cta">
-        <a class="btn btn-primary" target="_blank" rel="noopener" href="https://wa.me/6281511515141">Hubungi Kami</a>
-      </div>
-      <button class="nav-toggle" id="navToggle" aria-label="Toggle Menu">☰</button>
+<header class="site-header fixed">
+  <div class="container header-inner">
+    <!-- Logo -->
+    <div class="brand" onclick="scrollToId('home')">
+      <div class="brand-mark"><i data-feather="car"></i></div>
+      <span class="brand-name">Fauzan Rentcar</span>
     </div>
-    <nav class="nav-mobile" id="navMobile">
+
+    <!-- Desktop Navigation -->
+    <nav class="nav-desktop">
       <button onclick="scrollToId('home')">Home</button>
       <button onclick="scrollToId('booking')">Booking</button>
       <button onclick="scrollToId('catalog')">Katalog Mobil</button>
       <button onclick="scrollToId('packages')">Paket &amp; Syarat</button>
       <button onclick="scrollToId('location')">Lokasi</button>
-      <a class="btn btn-primary" target="_blank" rel="noopener" href="https://wa.me/6281511515141">Hubungi Kami</a>
     </nav>
-  </header>
+
+    <!-- Desktop CTA -->
+    <div class="header-cta">
+      <a
+        class="btn btn-primary"
+        href="https://wa.me/6281511515141"
+        target="_blank"
+        rel="noopener"
+      >
+        Hubungi Kami
+      </a>
+    </div>
+
+    <!-- Mobile Menu Button -->
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle Menu">
+      <i data-feather="menu"></i>
+    </button>
+  </div>
+
+  <!-- Mobile Menu -->
+  <nav class="nav-mobile" id="navMobile">
+    <button onclick="scrollToId('home')">Home</button>
+    <button onclick="scrollToId('booking')">Booking</button>
+    <button onclick="scrollToId('catalog')">Katalog Mobil</button>
+    <button onclick="scrollToId('packages')">Paket &amp; Syarat</button>
+    <button onclick="scrollToId('location')">Lokasi</button>
+    <a
+      class="btn btn-primary w-full"
+      href="https://wa.me/6281511515141"
+      target="_blank"
+      rel="noopener"
+    >
+      Hubungi Kami
+    </a>
+  </nav>
+</header>
 
   <!-- Hero -->
   <section id="home" class="hero">
