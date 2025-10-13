@@ -174,16 +174,6 @@ body{
 .cta h2{margin:0 0 6px;font-weight:800}
 .cta p{margin:0;opacity:.95}
 
-/* Form */
-.form{display:grid;grid-template-columns:1fr 1fr;gap:16px;padding:22px}
-.form-row{display:flex;flex-direction:column;gap:8px}
-.form-row:nth-child(5){grid-column:1/-1}
-.form button{grid-column:1/-1;margin-top:6px}
-label{font-weight:600;color:#334155}
-input,select,textarea{height:44px;padding:0 12px;border:1px solid var(--border);border-radius:10px;background:#fff;outline:none}
-input:focus,select:focus,textarea:focus{border-color:var(--accent);box-shadow:0 0 0 3px rgba(59,130,246,.15)}
-
-@media (max-width:720px){.form{grid-template-columns:1fr}}
 
 /* Catalog */
 .catalog-card{border:1px solid var(--border);border-radius:14px;overflow:hidden;background:#fff;box-shadow:var(--shadow);display:flex;flex-direction:column}
