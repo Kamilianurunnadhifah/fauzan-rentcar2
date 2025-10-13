@@ -117,47 +117,55 @@
 
   <!-- Booking Form -->
   <section id="booking" class="section">
-    <div class="container narrow">
-      <h2 class="section-title">Booking Sekarang</h2>
-      <p class="section-desc">Isi formulir di bawah ini, kami akan menghubungi Anda via WhatsApp.</p>
-      <div class="card">
-        <form id="bookingForm" class="form">
-          <div class="form-row">
-            <label for="name">Nama Lengkap</label>
-            <input id="name" name="name" type="text" placeholder="Nama lengkap" required />
-          </div>
-          <div class="form-row">
-            <label for="startDate">Tanggal Mulai</label>
-            <input id="startDate" name="startDate" type="date" required />
-          </div>
-          <div class="form-row">
-            <label for="destination">Tujuan Pemakaian</label>
-            <input id="destination" name="destination" type="text" placeholder="Contoh: wisata keluarga, acara kantor, dll" required />
-          </div>
-          <div class="form-row">
-            <label for="duration">Lama Sewa</label>
-            <select id="duration" name="duration" required>
-              <option value="">Pilih lama sewa</option>
-              <option>Harian</option>
-              <option>Mingguan</option>
-              <option>Bulanan</option>
-            </select>
-          </div>
-          <div class="form-row">
-            <label for="carType">Pilihan Mobil</label>
-            <select id="carType" name="carType" required>
-              <option value="">Pilih tipe mobil</option>
-              <option>Toyota Avanza</option>
-              <option>Honda Brio</option>
-              <option>Daihatsu Xenia</option>
-              <option>Toyota Innova</option>
-            </select>
-          </div>
-          <button class="btn btn-primary btn-lg" type="submit">Kirim ke WhatsApp</button>
-        </form>
-      </div>
+  <div class="container narrow">
+    <h2 class="section-title">Booking Sekarang</h2>
+    <p class="section-desc">
+      Isi formulir di bawah ini, kami akan menghubungi Anda via WhatsApp.
+    </p>
+
+    <div class="card">
+      <form id="bookingForm" class="form">
+        <div class="form-row">
+          <label for="name">Nama Lengkap</label>
+          <input id="name" name="name" type="text" placeholder="Masukkan nama lengkap" required />
+        </div>
+
+        <div class="form-row">
+          <label for="startDate">Tanggal Mulai</label>
+          <input id="startDate" name="startDate" type="date" placeholder="dd/mm/yyyy" required />
+        </div>
+
+        <div class="form-row">
+          <label for="destination">Tujuan Pemakaian</label>
+          <input id="destination" name="destination" type="text" placeholder="Contoh: Wisata keluarga, Acara kantor, dll" required />
+        </div>
+
+        <div class="form-row">
+          <label for="duration">Lama Sewa</label>
+          <select id="duration" name="duration" required>
+            <option value="">Pilih lama sewa</option>
+            <option>Harian</option>
+            <option>Mingguan</option>
+            <option>Bulanan</option>
+          </select>
+        </div>
+
+        <div class="form-row">
+          <label for="carType">Pilihan Mobil</label>
+          <select id="carType" name="carType" required>
+            <option value="">Pilih tipe mobil</option>
+            <option>Toyota Avanza</option>
+            <option>Honda Brio</option>
+            <option>Daihatsu Xenia</option>
+            <option>Toyota Innova</option>
+          </select>
+        </div>
+
+        <button class="btn btn-primary btn-lg" type="submit">Kirim ke WhatsApp</button>
+      </form>
     </div>
-  </section>
+  </div>
+</section>
 
   <!-- Catalog -->
   <section id="catalog" class="section section-alt">
