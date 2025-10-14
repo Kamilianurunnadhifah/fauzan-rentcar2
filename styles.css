@@ -337,13 +337,17 @@ body{
   background-color: #1e3a8a;
 }
 
-.footer a {
-  color: #1E3A8A;                /* warna putih */
-  text-decoration: none;      /* hilangkan garis bawah */
+/* Footer link tone agar lembut selaras dengan teks muted */
+.footer a,
+.footer a:visited,
+.footer a:active {
+  color: rgba(255,255,255,0.8);   /* abu terang seperti .muted */
+  text-decoration: none;
   transition: color 0.3s ease;
 }
 
 .footer a:hover {
-  color: #3B82F6;             /* opsional: warna biru muda saat hover */
+  color: #ffffff;                /* jadi putih saat hover */
+  text-decoration: underline;    /* opsional: tambahkan garis bawah halus */
 }
 
