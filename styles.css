@@ -336,12 +336,14 @@ body{
 .btn-primary:hover {
   background-color: #1e3a8a;
 }
-.footer .muted a {
-  color: #fff;
-  text-decoration: none;
-}
-.footer .muted a:hover {
-  color: #3B82F6;
+
+.footer a {
+  color: #fff;                /* warna putih */
+  text-decoration: none;      /* hilangkan garis bawah */
+  transition: color 0.3s ease;
 }
 
+.footer a:hover {
+  color: #3B82F6;             /* opsional: warna biru muda saat hover */
+}
 
