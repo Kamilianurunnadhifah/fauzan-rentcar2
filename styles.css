@@ -338,7 +338,7 @@ body{
 }
 
 .footer a {
-  color: #fff;                /* warna putih */
+  color: #1E3A8A;                /* warna putih */
   text-decoration: none;      /* hilangkan garis bawah */
   transition: color 0.3s ease;
 }
