@@ -22,9 +22,9 @@ const cars = [
   {
     name: "Honda Jazz RS 2024",
     images: [
-      "assets/mobil/jazz1.jpg",
-      "assets/mobil/jazz2.jpg",
-      "assets/mobil/jazz3.jpg"
+      "assets/mobil/Jazz1.jpg",
+      "assets/mobil/Jazz2.jpg",
+      "assets/mobil/Jazz3.jpg"
     ],
     priceDaily: "Rp450.000",
     priceWeekly: "Rp3.000.000",
