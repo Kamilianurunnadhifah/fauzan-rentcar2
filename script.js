@@ -20,11 +20,11 @@ if (bookingForm) {
 // Data mobil dengan banyak foto
 const cars = [
   {
-    name: "Honda Jazz RS",
+    name: "Honda Jazz RS 2024",
     images: [
-      "https://images.unsplash.com/photo-1600353060320-1e37b153fa4b?auto=format&fit=crop&w=1200&q=60",
-      "https://images.unsplash.com/photo-1617440168935-fecffcb435e4?auto=format&fit=crop&w=1200&q=60",
-      "https://images.unsplash.com/photo-1600932715830-8a04f2713b28?auto=format&fit=crop&w=1200&q=60"
+      "assets/mobil/jazz1.jpg",
+      "assets/mobil/jazz2.jpg",
+      "assets/mobil/jazz3.jpg"
     ],
     priceDaily: "Rp450.000",
     priceWeekly: "Rp3.000.000",
