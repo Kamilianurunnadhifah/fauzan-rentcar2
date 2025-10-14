@@ -336,4 +336,12 @@ body{
 .btn-primary:hover {
   background-color: #1e3a8a;
 }
+.footer .muted a {
+  color: #fff;
+  text-decoration: none;
+}
+.footer .muted a:hover {
+  color: #3B82F6;
+}
+
 
