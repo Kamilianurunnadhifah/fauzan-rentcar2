@@ -337,17 +337,20 @@ body{
   background-color: #1e3a8a;
 }
 
-/* Footer link tone agar lembut selaras dengan teks muted */
+/* Footer link tone konsisten dengan teks muted */
 .footer a,
 .footer a:visited,
 .footer a:active {
-  color: rgba(255,255,255,0.8);   /* abu terang seperti .muted */
+  color: rgba(255, 255, 255, 0.85); /* putih lembut sama seperti teks muted */
   text-decoration: none;
-  transition: color 0.3s ease;
+  font-weight: 500;                  /* biar gak terlalu tebal */
+  transition: color 0.3s ease, opacity 0.3s ease;
 }
 
 .footer a:hover {
-  color: #ffffff;                /* jadi putih saat hover */
-  text-decoration: underline;    /* opsional: tambahkan garis bawah halus */
+  color: #ffffff;                    /* full putih saat hover */
+  opacity: 1;
+  text-decoration: underline;        /* efek halus saat diarahkan */
 }
+
 
