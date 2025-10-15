@@ -96,4 +96,40 @@ if (grid) {
       },
     });
   });
+  document.getElementById("duration").addEventListener("change", function() {
+  var timeSelect = document.getElementById("time");
+  var durationValue = this.value;
+  
+  // Kosongkan opsi sebelumnya
+  timeSelect.innerHTML = '<option value="">Pilih jumlah sewa</option>';
+  
+  // Tentukan jumlah pilihan berdasarkan lama sewa
+  if (durationValue === "harian") {
+    // Pilihan untuk harian (1-6 hari)
+    for (var i = 1; i <= 6; i++) {
+      var option = document.createElement("option");
+      option.value = i;
+      option.textContent = i + " Hari";
+      timeSelect.appendChild(option);
+    }
+  } else if (durationValue === "mingguan") {
+    // Pilihan untuk mingguan (1-3 minggu)
+    for (var i = 1; i <= 3; i++) {
+      var option = document.createElement("option");
+      option.value = i;
+      option.textContent = i + " Minggu";
+      timeSelect.appendChild(option);
+    }
+  } else if (durationValue === "bulanan") {
+    // Pilihan untuk bulanan (1-6 bulan)
+    for (var i = 1; i <= 6; i++) {
+      var option = document.createElement("option");
+      option.value = i;
+      option.textContent = i + " Bulan";
+      timeSelect.appendChild(option);
+    }
+  }
+});
+
 }
+
