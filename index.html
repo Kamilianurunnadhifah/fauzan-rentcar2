@@ -126,15 +126,23 @@
           <label for="destination">Tujuan Pemakaian</label>
           <input id="destination" name="destination" type="text" placeholder="Contoh: Wisata keluarga, Acara kantor, dll" required />
         </div>
-        <div class="form-row">
-          <label for="duration">Lama Sewa</label>
-          <select id="duration" name="duration" required>
-            <option value="">Pilih lama sewa</option>
-            <option>Harian</option>
-            <option>Mingguan</option>
-            <option>Bulanan</option>
-          </select>
-        </div>
+<div class="form-row">
+  <label for="duration">Lama Sewa</label>
+  <select id="duration" name="duration" required>
+    <option value="">Pilih lama sewa</option>
+    <option value="harian">Harian</option>
+    <option value="mingguan">Mingguan</option>
+    <option value="bulanan">Bulanan</option>
+  </select>
+</div>
+
+<div class="form-row">
+  <label for="time">Jumlah Hari/Minggu/Bulan</label>
+  <select id="time" name="time" required>
+    <option value="">Pilih jumlah sewa</option>
+  </select>
+</div>
+
         <div class="form-row">
           <label for="carType">Pilihan Mobil</label>
           <select id="carType" name="carType" required>
