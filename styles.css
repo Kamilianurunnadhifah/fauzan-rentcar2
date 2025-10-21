@@ -111,6 +111,71 @@ body{
   .nav-toggle { display: none; }
 }
 
+/* Sidebar Style (default di desktop) */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 250px;
+  height: 100%;
+  background-color: #1E3A8A;
+  color: white;
+  padding: 20px;
+  display: block; /* Tampilkan di desktop */
+  z-index: 1000;
+  transition: transform 0.3s ease;
+}
+
+.sidebar-content .menu {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar-content .menu li {
+  margin: 20px 0;
+}
+
+.sidebar-content .menu li a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  display: block;
+  transition: color 0.3s ease;
+}
+
+.sidebar-content .menu li a:hover {
+  color: #3B82F6; /* Warna hover */
+}
+
+/* Menyembunyikan sidebar di mobile */
+@media (max-width: 768px) {
+  .sidebar {
+    transform: translateX(-100%);
+  }
+
+  .sidebar.show {
+    transform: translateX(0);
+  }
+
+  .nav-toggle {
+    display: block; /* Menampilkan tombol hamburger di mobile */
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 24px;
+    cursor: pointer;
+  }
+
+  /* Menyembunyikan sidebar menu pada perangkat mobile secara default */
+  .sidebar-content {
+    display: none;
+  }
+
+  .sidebar.show .sidebar-content {
+    display: block;
+  }
+}
+
 /* Mobile menu */
 .nav-mobile {
   display: none;
