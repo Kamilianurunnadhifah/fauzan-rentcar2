@@ -17,21 +17,6 @@ if (bookingForm) {
   });
 }
 
-// Toggle sidebar saat tombol hamburger ditekan
-const navToggle = document.getElementById('navToggle');
-const sidebar = document.getElementById('sidebar');
-const closeSidebar = document.getElementById('closeSidebar');
-
-navToggle.addEventListener('click', () => {
-  sidebar.classList.toggle('show'); // Toggling 'show' untuk sidebar
-});
-
-// Menutup sidebar ketika tombol close ditekan
-if (closeSidebar) {
-  closeSidebar.addEventListener('click', () => {
-    sidebar.classList.remove('show');
-  });
-}
 
 // Data mobil dengan banyak foto
 const cars = [
@@ -103,7 +88,6 @@ if (grid) {
     </div>
   `).join("");
 
-  // Initialize Swiper for each car swiper
   cars.forEach((_, i) => {
     new Swiper(`.car-swiper-${i}`, {
       loop: true,
@@ -113,40 +97,39 @@ if (grid) {
       },
     });
   });
-
-  // Dynamic Options for 'Lama Sewa'
   document.getElementById("duration").addEventListener("change", function() {
-    var timeSelect = document.getElementById("time");
-    var durationValue = this.value;
-
-    // Kosongkan opsi sebelumnya
-    timeSelect.innerHTML = '<option value="">Pilih jumlah sewa</option>';
-
-    // Tentukan jumlah pilihan berdasarkan lama sewa
-    if (durationValue === "harian") {
-      // Pilihan untuk harian (1-6 hari)
-      for (var i = 1; i <= 6; i++) {
-        var option = document.createElement("option");
-        option.value = i;
-        option.textContent = i + " Hari";
-        timeSelect.appendChild(option);
-      }
-    } else if (durationValue === "mingguan") {
-      // Pilihan untuk mingguan (1-3 minggu)
-      for (var i = 1; i <= 3; i++) {
-        var option = document.createElement("option");
-        option.value = i;
-        option.textContent = i + " Minggu";
-        timeSelect.appendChild(option);
-      }
-    } else if (durationValue === "bulanan") {
-      // Pilihan untuk bulanan (1-6 bulan)
-      for (var i = 1; i <= 6; i++) {
-        var option = document.createElement("option");
-        option.value = i;
-        option.textContent = i + " Bulan";
-        timeSelect.appendChild(option);
-      }
+  var timeSelect = document.getElementById("time");
+  var durationValue = this.value;
+  
+  // Kosongkan opsi sebelumnya
+  timeSelect.innerHTML = '<option value="">Pilih jumlah sewa</option>';
+  
+  // Tentukan jumlah pilihan berdasarkan lama sewa
+  if (durationValue === "harian") {
+    // Pilihan untuk harian (1-6 hari)
+    for (var i = 1; i <= 6; i++) {
+      var option = document.createElement("option");
+      option.value = i;
+      option.textContent = i + " Hari";
+      timeSelect.appendChild(option);
     }
-  });
-}
+  } else if (durationValue === "mingguan") {
+    // Pilihan untuk mingguan (1-3 minggu)
+    for (var i = 1; i <= 3; i++) {
+      var option = document.createElement("option");
+      option.value = i;
+      option.textContent = i + " Minggu";
+      timeSelect.appendChild(option);
+    }
+  } else if (durationValue === "bulanan") {
+    // Pilihan untuk bulanan (1-6 bulan)
+    for (var i = 1; i <= 6; i++) {
+      var option = document.createElement("option");
+      option.value = i;
+      option.textContent = i + " Bulan";
+      timeSelect.appendChild(option);
+    }
+  }
+});
+
+} sesuaikan javascript saya
