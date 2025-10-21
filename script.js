@@ -17,6 +17,15 @@ if (bookingForm) {
   });
 }
 
+// Toggle sidebar saat tombol hamburger ditekan
+const navToggle = document.getElementById('navToggle');
+const sidebar = document.getElementById('sidebar');
+
+navToggle.addEventListener('click', () => {
+  sidebar.classList.toggle('show'); // Toggling 'show' untuk sidebar
+});
+
+
 // Data mobil dengan banyak foto
 const cars = [
   {
