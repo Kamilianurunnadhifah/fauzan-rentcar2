@@ -13,7 +13,7 @@ const navMobile = document.getElementById("navMobile");
 if (navToggle && navMobile) {
   navToggle.addEventListener("click", function() {
     // Toggle a class that shows or hides the mobile menu
-    navMobile.classList.toggle("open");
+    navMobile.classList.toggle("show");
   });
 }
 
