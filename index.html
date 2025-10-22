@@ -349,33 +349,6 @@
   feather.replace();
 </script>
 
-<!-- HTML -->
-<div id="navMobile" class="sidebar-nav">
-  <div class="quick-links">
-    <button onclick="scrollToId('home')">Home</button>
-    <button onclick="scrollToId('booking')">Booking</button>
-    <!-- ... item lain ... -->
-  </div>
-</div>
-
-<!-- Script (diletakkan di akhir body atau dijamin setelah elemen di atas) -->
-<script>
-const navToggle = document.getElementById("navToggle");
-const navMobile = document.getElementById("navMobile");
-
-// Toggle open/close menu on hamburger click
-if (navToggle && navMobile) {
-  navToggle.addEventListener("click", function() {
-    navMobile.classList.toggle("show");
-  });
-}
-
-// Close menu on link (button) click
-document.querySelectorAll('#navMobile button').forEach(btn => {
-  btn.addEventListener('click', function() {
-    navMobile.classList.remove('show');
-  });
-});
 </script>
   
 </body>
