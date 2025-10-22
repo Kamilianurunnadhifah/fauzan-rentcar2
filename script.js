@@ -12,6 +12,16 @@ function scrollToId(id) {
   if (el) el.scrollIntoView({ behavior: 'smooth' });
 }
 
+// Tutup menu navigasi mobile ketika link di dalamnya diklik
+document.querySelectorAll('#navMobile a').forEach(link => {
+  link.addEventListener('click', function() {
+    // Hapus class 'show' dari sidebar nav mobile untuk menutup menu
+    document.getElementById('navMobile').classList.remove('show');
+    // (Tidak menghentikan event default, sehingga scrollToId masih akan berjalan)
+  });
+});
+
+
 // Toggle menu mobile
 const navToggle = document.getElementById("navToggle");
 const navMobile = document.getElementById("navMobile");
