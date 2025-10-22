@@ -4,35 +4,22 @@ function scrollToId(id) {
   if (el) el.scrollIntoView({ behavior: 'smooth' });
 }
 
-// script.js
-
-// Smooth scroll
-function scrollToId(id) {
-  const el = document.getElementById(id);
-  if (el) el.scrollIntoView({ behavior: 'smooth' });
-}
-
-// Tutup menu navigasi mobile ketika link di dalamnya diklik
-document.querySelectorAll('#navMobile a').forEach(link => {
-  link.addEventListener('click', function() {
-    // Hapus class 'show' dari sidebar nav mobile untuk menutup menu
-    document.getElementById('navMobile').classList.remove('show');
-    // (Tidak menghentikan event default, sehingga scrollToId masih akan berjalan)
-  });
-});
-
-
 // Toggle menu mobile
 const navToggle = document.getElementById("navToggle");
 const navMobile = document.getElementById("navMobile");
 
 if (navToggle && navMobile) {
-  navToggle.addEventListener("click", function() {
-    // gunakan class 'show' agar cocok dengan CSS
+  navToggle.addEventListener("click", function () {
     navMobile.classList.toggle("show");
   });
 }
 
+// ✅ Tutup menu saat tombol navigasi diklik (khusus navMobile)
+document.querySelectorAll('#navMobile button').forEach(btn => {
+  btn.addEventListener('click', function () {
+    navMobile.classList.remove('show');
+  });
+});
 
 // Booking form -> WhatsApp
 const bookingForm = document.getElementById('bookingForm');
