@@ -6,16 +6,23 @@ function scrollToId(id) {
 
 // script.js
 
-// Logic to toggle the mobile menu
+// Smooth scroll
+function scrollToId(id) {
+  const el = document.getElementById(id);
+  if (el) el.scrollIntoView({ behavior: 'smooth' });
+}
+
+// Toggle menu mobile
 const navToggle = document.getElementById("navToggle");
 const navMobile = document.getElementById("navMobile");
 
 if (navToggle && navMobile) {
   navToggle.addEventListener("click", function() {
-    // Toggle a class that shows or hides the mobile menu
+    // gunakan class 'show' agar cocok dengan CSS
     navMobile.classList.toggle("show");
   });
 }
+
 
 // Booking form -> WhatsApp
 const bookingForm = document.getElementById('bookingForm');
