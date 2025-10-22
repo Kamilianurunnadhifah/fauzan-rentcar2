@@ -4,6 +4,19 @@ function scrollToId(id) {
   if (el) el.scrollIntoView({ behavior: 'smooth' });
 }
 
+// script.js
+
+// Logic to toggle the mobile menu
+const navToggle = document.getElementById("navToggle");
+const navMobile = document.getElementById("navMobile");
+
+if (navToggle && navMobile) {
+  navToggle.addEventListener("click", function() {
+    // Toggle a class that shows or hides the mobile menu
+    navMobile.classList.toggle("open");
+  });
+}
+
 // Booking form -> WhatsApp
 const bookingForm = document.getElementById('bookingForm');
 if (bookingForm) {
