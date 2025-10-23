@@ -35,6 +35,22 @@ body{
 }
 .section-desc{ text-align:center;color:var(--muted);margin:0 0 32px}
 
+/* --- logo --- */
+.brand-logo {
+  width: 40px;       /* ubah sesuai kebutuhan */
+  height: 40px;      /* pastikan proporsional */
+  object-fit: contain;
+  border-radius: 8px; /* opsional: buat sudut sedikit melengkung */
+  margin-right: 10px; /* jarak antara logo dan teks */
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.brand-logo:hover {
+  transform: scale(1.05);
+}
+
+
 /* --- Modern Header Style (React-like) --- */
 .site-header.fixed {
   position: fixed;
