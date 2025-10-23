@@ -135,6 +135,30 @@ body{
   .nav-toggle { display: none; }
 }
 
+/* Galeri: 9 foto dalam 1 baris, scroll horizontal jika overflow */
+.gallery {
+  display: flex;
+  flex-wrap: nowrap;       /* Jangan membungkus ke baris baru */
+  overflow-x: auto;        /* Tampilkan scroll horizontal jika konten overflow */
+  -webkit-overflow-scrolling: touch; /* agar scroll halus di mobile */
+}
+
+.gallery a {
+  display: inline-block;
+  margin-right: 8px;       /* Jarak horizontal antar gambar */
+  text-decoration: none;   /* Hilangkan underline pada link gambar */
+}
+.gallery a:last-child {
+  margin-right: 0;         /* Tidak ada margin di gambar terakhir */
+}
+
+.gallery img {
+  height: 150px;           /* Tinggi thumbnail seragam 150px */
+  width: auto;             /* Lebar menyesuaikan agar rasio terjaga */
+  object-fit: cover;       /* (Opsional) memotong gambar jika tidak sesuai ratio */
+  display: block;
+}
+
 
 /* Mobile menu */
 .nav-mobile {
