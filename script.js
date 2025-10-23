@@ -148,5 +148,13 @@ if (grid) {
     }
   }
 });
+  
+// Inisialisasi GLightbox setelah halaman termuat
+const lightbox = GLightbox({
+  touchNavigation: true,   // memungkinkan navigasi sentuh (swipe) di mobile
+  loop: true               // memungkinkan looping ke foto pertama setelah foto terakhir
+});
+// Secara default, GLightbox akan otomatis mencari elemen dengan class "glightbox" dan mengaktifkan lightbox pada elemen tersebut.
 
+  
 } 
