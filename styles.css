@@ -35,142 +35,45 @@ body{
 }
 .section-desc{ text-align:center;color:var(--muted);margin:0 0 32px}
 
-/* --- logo --- */
-.brand-logo {
-  width: 40px;       /* ubah sesuai kebutuhan */
-  height: 40px;      /* pastikan proporsional */
-  object-fit: contain;
-  border-radius: 8px; /* opsional: buat sudut sedikit melengkung */
-  margin-right: 10px; /* jarak antara logo dan teks */
-  cursor: pointer;
-  transition: transform 0.2s;
-}
-
-.brand-logo:hover {
-  transform: scale(1.05);
-}
-
-.site-header .brand-logo {
-  height: 40px !important;
-  width: auto !important;
-  max-height: 48px;
-  object-fit: contain;
-}
-
-/* --- Modern Header Style (React-like) --- */
-.site-header.fixed {
-  position: fixed;
-  top: 0; left: 0; right: 0;
-  z-index: 50;
-  background: #fff;
-  box-shadow: 0 1px 4px rgba(0,0,0,.05);
-}
-
-.header-inner {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  height: 80px;
-  gap: 20px;
-}
-
-.brand {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  cursor: pointer;
-}
-
-.brand-mark {
-  width: 42px;
-  height: 42px;
-  border-radius: 50%;
-  background: #1E40AF;
-  color: #fff;
-  display: grid;
-  place-items: center;
-}
-
-.brand-name {
-  font-size: 20px;
-  font-weight: 600;
-  color: #1E40AF;
-  letter-spacing: -0.3px;
-}
-
-.nav-desktop {
-  display: none;
-  gap: 28px;
-}
-
-.nav-desktop button {
-  background: none;
-  border: none;
-  font-size: 16px;
-  color: #334155;
-  cursor: pointer;
-  transition: color .2s;
-}
-
-.nav-desktop button:hover {
-  color: #1E40AF;
-}
-
-.header-cta { display: none; }
-
-.nav-toggle {
-  background: none;
-  border: none;
-  color: #334155;
-  font-size: 24px;
-  cursor: pointer;
-}
-
-/* Responsive layout */
-@media (min-width: 960px) {
-  .nav-desktop { display: flex; }
-  .header-cta { display: block; }
-  .nav-toggle { display: none; }
-}
-
 /* Galeri: 9 gambar dalam 1 baris, responsif */
 .gallery {
   display: grid;
-  grid-template-columns: repeat(9, minmax(120px, 1fr)); /* Menampilkan 9 gambar dalam 1 baris dengan ukuran minimal 120px */
-  gap: 8px;                           /* Spasi antar gambar */
+  grid-template-columns: repeat(9, minmax(150px, 1fr)); /* Menampilkan 9 gambar dalam 1 baris */
+  gap: 16px; /* Spasi antar gambar */
   margin-top: 18px;
-  justify-items: center;              /* Menyelaraskan gambar di tengah */
+  justify-items: center; /* Menyelaraskan gambar di tengah */
 }
 
+/* Gambar Galeri - Memperkecil ukuran gambar */
 .gallery img {
-  width: 100%;                        /* Membuat gambar mengisi ruang grid */
-  height: auto;                       /* Mempertahankan rasio aspek gambar */
-  object-fit: cover;                  /* Memotong gambar jika diperlukan */
-  border-radius: 10px;                /* Sudut gambar dibulatkan */
+  width: 100%; /* Membuat gambar mengisi ruang grid */
+  height: auto; /* Mempertahankan rasio aspek gambar */
+  object-fit: cover; /* Memotong gambar jika diperlukan */
+  border-radius: 10px; /* Sudut gambar dibulatkan */
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .gallery img:hover {
-  transform: scale(1.03);             /* Efek zoom sedikit saat gambar dihover */
+  transform: scale(1.05); /* Efek zoom sedikit saat gambar dihover */
   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
 }
 
-/* Galeri menjadi responsif pada layar kecil */
+/* Responsif Galeri: Menyesuaikan dengan ukuran layar */
 @media (max-width: 1200px) {
   .gallery {
-    grid-template-columns: repeat(6, minmax(120px, 1fr)); /* 6 gambar per baris */
+    grid-template-columns: repeat(6, minmax(150px, 1fr)); /* 6 gambar per baris */
   }
 }
 
 @media (max-width: 900px) {
   .gallery {
-    grid-template-columns: repeat(3, minmax(120px, 1fr)); /* 3 gambar per baris */
+    grid-template-columns: repeat(4, minmax(150px, 1fr)); /* 4 gambar per baris */
   }
 }
 
 @media (max-width: 600px) {
   .gallery {
-    grid-template-columns: repeat(2, minmax(120px, 1fr)); /* 2 gambar per baris */
+    grid-template-columns: repeat(2, minmax(150px, 1fr)); /* 2 gambar per baris */
   }
 }
 
