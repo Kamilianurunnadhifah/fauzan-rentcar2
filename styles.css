@@ -57,8 +57,6 @@ body{
   object-fit: contain;
 }
 
-
-
 /* --- Modern Header Style (React-like) --- */
 .site-header.fixed {
   position: fixed;
@@ -138,7 +136,7 @@ body{
 /* Galeri: 9 gambar dalam 1 baris, responsif */
 .gallery {
   display: grid;
-  grid-template-columns: repeat(9, 1fr); /* Menampilkan 9 gambar dalam 1 baris */
+  grid-template-columns: repeat(9, minmax(120px, 1fr)); /* Menampilkan 9 gambar dalam 1 baris dengan ukuran minimal 120px */
   gap: 8px;                           /* Spasi antar gambar */
   margin-top: 18px;
   justify-items: center;              /* Menyelaraskan gambar di tengah */
@@ -160,23 +158,21 @@ body{
 /* Galeri menjadi responsif pada layar kecil */
 @media (max-width: 1200px) {
   .gallery {
-    grid-template-columns: repeat(6, 1fr); /* Untuk layar sedang (6 gambar per baris) */
+    grid-template-columns: repeat(6, minmax(120px, 1fr)); /* 6 gambar per baris */
   }
 }
 
 @media (max-width: 900px) {
   .gallery {
-    grid-template-columns: repeat(3, 1fr); /* Untuk layar lebih kecil (3 gambar per baris) */
+    grid-template-columns: repeat(3, minmax(120px, 1fr)); /* 3 gambar per baris */
   }
 }
 
 @media (max-width: 600px) {
   .gallery {
-    grid-template-columns: repeat(2, 1fr); /* Untuk layar mobile (2 gambar per baris) */
+    grid-template-columns: repeat(2, minmax(120px, 1fr)); /* 2 gambar per baris */
   }
 }
-
-
 
 /* Mobile menu */
 .nav-mobile {
@@ -198,8 +194,6 @@ body{
   cursor: pointer;
 }
 .nav-mobile button:hover { color: #1E40AF; }
-
-
 
 /* Buttons */
 .btn{--h:44px;display:inline-flex;align-items:center;justify-content:center;height:var(--h);padding:0 18px;border-radius:10px;border:1px solid transparent;font-weight:600;cursor:pointer;transition:.2s all ease}
