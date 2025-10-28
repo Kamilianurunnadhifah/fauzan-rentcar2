@@ -135,29 +135,47 @@ body{
   .nav-toggle { display: none; }
 }
 
-/* Galeri: 9 foto dalam 1 baris, scroll horizontal jika overflow */
+/* Galeri: 9 gambar dalam 1 baris, responsif */
 .gallery {
-  display: flex;
-  flex-wrap: nowrap;       /* Jangan membungkus ke baris baru */
-  overflow-x: auto;        /* Tampilkan scroll horizontal jika konten overflow */
-  -webkit-overflow-scrolling: touch; /* agar scroll halus di mobile */
-}
-
-.gallery a {
-  display: inline-block;
-  margin-right: 8px;       /* Jarak horizontal antar gambar */
-  text-decoration: none;   /* Hilangkan underline pada link gambar */
-}
-.gallery a:last-child {
-  margin-right: 0;         /* Tidak ada margin di gambar terakhir */
+  display: grid;
+  grid-template-columns: repeat(9, 1fr); /* Menampilkan 9 gambar dalam 1 baris */
+  gap: 8px;                           /* Spasi antar gambar */
+  margin-top: 18px;
+  justify-items: center;              /* Menyelaraskan gambar di tengah */
 }
 
 .gallery img {
-  height: 150px;           /* Tinggi thumbnail seragam 150px */
-  width: auto;             /* Lebar menyesuaikan agar rasio terjaga */
-  object-fit: cover;       /* (Opsional) memotong gambar jika tidak sesuai ratio */
-  display: block;
+  width: 100%;                        /* Membuat gambar mengisi ruang grid */
+  height: auto;                       /* Mempertahankan rasio aspek gambar */
+  object-fit: cover;                  /* Memotong gambar jika diperlukan */
+  border-radius: 10px;                /* Sudut gambar dibulatkan */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
+.gallery img:hover {
+  transform: scale(1.03);             /* Efek zoom sedikit saat gambar dihover */
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* Galeri menjadi responsif pada layar kecil */
+@media (max-width: 1200px) {
+  .gallery {
+    grid-template-columns: repeat(6, 1fr); /* Untuk layar sedang (6 gambar per baris) */
+  }
+}
+
+@media (max-width: 900px) {
+  .gallery {
+    grid-template-columns: repeat(3, 1fr); /* Untuk layar lebih kecil (3 gambar per baris) */
+  }
+}
+
+@media (max-width: 600px) {
+  .gallery {
+    grid-template-columns: repeat(2, 1fr); /* Untuk layar mobile (2 gambar per baris) */
+  }
+}
+
 
 
 /* Mobile menu */
