@@ -38,48 +38,103 @@ if (bookingForm) {
 // Data mobil dengan banyak foto
 const cars = [
   {
-    name: "Honda Jazz RS 2024",
+    name: "Toyota Reborn 2.0 G Matic",
+    images: [
+      "assets/mobil/innova1.jpg",
+      "assets/mobil/innova2.jpg",
+      "assets/mobil/innova3.jpg"
+    ],
+    priceDaily: "Rp650.000",
+    priceWeekly: "Rp4.500.000",
+    priceMonthly: "Rp12.000.000",
+  },
+    {
+    name: "Honda All New Brio 2025 Matic",
+    images: [
+      "assets/mobil/allbrio1.jpg",
+      "assets/mobil/allbrio2.jpg",
+      "assets/mobil/allbrio3.jpg"
+    ],
+    priceDaily: "Rp350.000",
+    priceWeekly: "Rp2.000.000",
+    priceMonthly: "Rp7.000.000",
+  },
+      {
+    name: "Honda All New BRV Prestige 2024 Matic",
+    images: [
+      "assets/mobil/allbrv1.jpg",
+      "assets/mobil/allbrv2.jpg",
+      "assets/mobil/allbrv3.jpg"
+    ],
+    priceDaily: "Rp450.000",
+    priceWeekly: "Rp3.000.000",
+    priceMonthly: "Rp12.500.000",
+  },
+        {
+    name: "Honda Jazz RS Fit 2017 Matic",
     images: [
       "assets/mobil/jazz1.jpg",
       "assets/mobil/jazz2.jpg",
       "assets/mobil/jazz3.jpg"
     ],
-    priceDaily: "Rp450.000",
-    priceWeekly: "Rp3.000.000",
-    priceMonthly: "Rp11.000.000",
+    priceDaily: "Rp350.000",
+    priceWeekly: "Rp2.000.000",
+    priceMonthly: "Rp7.000.000",
   },
-  {
-    name: "Toyota Avanza",
+          {
+    name: "Honda Brio Facelift 2022 Matic",
     images: [
-      "https://images.unsplash.com/photo-1748621019980-8c9278b61974?auto=format&fit=crop&w=1200&q=60",
-      "https://images.unsplash.com/photo-1617430443861-3f4c6a15b8da?auto=format&fit=crop&w=1200&q=60",
-      "https://images.unsplash.com/photo-1589391886645-d51941b7aeb9?auto=format&fit=crop&w=1200&q=60"
+      "assets/mobil/briofl1.jpg",
+      "assets/mobil/briofl2.jpg",
+      "assets/mobil/briofl3.jpg"
+    ],
+    priceDaily: "Rp400.000",
+    priceWeekly: "Rp2.400.000",
+    priceMonthly: "Rp8.000.000",
+  },
+            {
+    name: "Toyota Reborn Diesel Matic 2023",
+    images: [
+      "assets/mobil/innovadiesel1.jpg",
+      "assets/mobil/innovadiesel2.jpg",
+      "assets/mobil/innovadiesel3.jpg"
+    ],
+    priceDaily: "Rp650.000",
+    priceWeekly: "Rp4.400.000",
+    priceMonthly: "Rp16.000.000",
+  },
+              {
+    name: "Toyota Avanza G 2019 Matic",
+    images: [
+      "assets/mobil/avanza1.jpg",
+      "assets/mobil/avanza2.jpg",
+      "assets/mobil/avanza3.jpg"
     ],
     priceDaily: "Rp350.000",
     priceWeekly: "Rp2.000.000",
-    priceMonthly: "Rp6.500.000",
+    priceMonthly: "Rp8.000.000",
   },
-  {
-    name: "Honda Brio",
+                {
+    name: "Mitsubishi Expander Facelift 2020 Matic",
     images: [
-      "https://images.unsplash.com/photo-1647240907605-2fe56a071bed?auto=format&fit=crop&w=1200&q=60",
-      "https://images.unsplash.com/photo-1617957743095-1b80279f1e8c?auto=format&fit=crop&w=1200&q=60",
-      "https://images.unsplash.com/photo-1610128603971-19e773ba8197?auto=format&fit=crop&w=1200&q=60"
-    ],
-    priceDaily: "Rp300.000",
-    priceWeekly: "Rp1.800.000",
-    priceMonthly: "Rp5.500.000",
-  },
-  {
-    name: "Toyota Innova",
-    images: [
-      "https://images.unsplash.com/photo-1748215210939-ad8b6c8c086d?auto=format&fit=crop&w=1200&q=60",
-      "https://images.unsplash.com/photo-1617440168935-fecffcb435e4?auto=format&fit=crop&w=1200&q=60",
-      "https://images.unsplash.com/photo-1605960928642-cc0b9c80efee?auto=format&fit=crop&w=1200&q=60"
+      "assets/mobil/expander1.jpg",
+      "assets/mobil/expander2.jpg",
+      "assets/mobil/expander3.jpg"
     ],
     priceDaily: "Rp450.000",
-    priceWeekly: "Rp2.800.000",
-    priceMonthly: "Rp8.500.000",
+    priceWeekly: "Rp3.000.000",
+    priceMonthly: "Rp9.000.000",
+  },
+                  {
+    name: "Honda City RS Hatchback 2021 Matic",
+    images: [
+      "assets/mobil/cityrs1.jpg",
+      "assets/mobil/cityrs2.jpg",
+      "assets/mobil/cityrs3.jpg"
+    ],
+    priceDaily: "Rp500.000",
+    priceWeekly: "Rp3.500.000",
+    priceMonthly: "Rp14.000.000",
   },
 ];
 
