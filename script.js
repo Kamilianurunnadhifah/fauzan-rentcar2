@@ -29,7 +29,7 @@ if (bookingForm) {
     const fd = new FormData(bookingForm);
     const data = Object.fromEntries(fd.entries());
     const message = `*Booking Fauzan Rentcar*%0A%0A*Nama:* ${data.name}%0A*Mulai:* ${data.startDate}%0A*Tujuan:* ${data.destination}%0A*Lama:* ${data.duration}%0A*Mobil:* ${data.carType}%0A%0ATerima kasih!`;
-    const wa = `https://wa.me/6281511515141?text=${message}`;
+    const wa = `https://wa.me/6287754907731?text=${message}`;
     window.open(wa, '_blank');
   });
 }
