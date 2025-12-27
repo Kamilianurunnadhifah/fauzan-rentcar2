@@ -35,7 +35,7 @@ if (bookingForm) {
 }
 
 
-// Data mobil dengan banyak foto
+// Data mobil 
 const cars = [
   {
     name: "Toyota Reborn 2.0 G Matic",
@@ -44,9 +44,9 @@ const cars = [
       "assets/mobil/innova2.jpg",
       "assets/mobil/innova3.jpg"
     ],
-    priceDaily: "Rp650.000",
-    priceWeekly: "Rp4.500.000",
-    priceMonthly: "Rp12.000.000",
+    priceDaily: "Rp550.000",
+    priceWeekly: "Rp3.850.000",
+    priceMonthly: "Rp11.000.000",
   },
     {
     name: "Honda All New Brio 2025 Matic",
@@ -55,9 +55,9 @@ const cars = [
       "assets/mobil/allbrio2.jpg",
       "assets/mobil/allbrio3.jpg"
     ],
-    priceDaily: "Rp350.000",
-    priceWeekly: "Rp2.000.000",
-    priceMonthly: "Rp7.000.000",
+    priceDaily: "Rp400.000",
+    priceWeekly: "Rp2.800.000",
+    priceMonthly: "Rp6.000.000",
   },
       {
     name: "Honda All New BRV Prestige 2024 Matic",
@@ -66,9 +66,9 @@ const cars = [
       "assets/mobil/allbrv2.jpg",
       "assets/mobil/allbrv3.jpg"
     ],
-    priceDaily: "Rp450.000",
-    priceWeekly: "Rp3.000.000",
-    priceMonthly: "Rp12.500.000",
+    priceDaily: "Rp550.000",
+    priceWeekly: "Rp3.850.000",
+    priceMonthly: "Rp10.500.000",
   },
         {
     name: "Honda Jazz RS Fit 2017 Matic",
@@ -77,9 +77,9 @@ const cars = [
       "assets/mobil/jazz2.jpg",
       "assets/mobil/jazz3.jpg"
     ],
-    priceDaily: "Rp350.000",
-    priceWeekly: "Rp2.000.000",
-    priceMonthly: "Rp7.000.000",
+    priceDaily: "Rp450.000",
+    priceWeekly: "Rp3.150.000",
+    priceMonthly: "Rp9.000.000",
   },
           {
     name: "Honda Brio Facelift 2022 Matic",
@@ -89,8 +89,8 @@ const cars = [
       "assets/mobil/briofl3.jpg"
     ],
     priceDaily: "Rp400.000",
-    priceWeekly: "Rp2.400.000",
-    priceMonthly: "Rp8.000.000",
+    priceWeekly: "Rp2.800.000",
+    priceMonthly: "Rp6.000.000",
   },
             {
     name: "Toyota Reborn Diesel Matic 2023",
@@ -99,9 +99,9 @@ const cars = [
       "assets/mobil/innovadiesel2.jpg",
       "assets/mobil/innovadiesel3.jpg"
     ],
-    priceDaily: "Rp650.000",
-    priceWeekly: "Rp4.400.000",
-    priceMonthly: "Rp16.000.000",
+    priceDaily: "Rp750.000",
+    priceWeekly: "Rp5.250.000",
+    priceMonthly: "Rp12.000.000",
   },
               {
     name: "Toyota Avanza G 2019 Matic",
@@ -111,7 +111,7 @@ const cars = [
       "assets/mobil/avanza3.jpg"
     ],
     priceDaily: "Rp350.000",
-    priceWeekly: "Rp2.000.000",
+    priceWeekly: "Rp2.450.000",
     priceMonthly: "Rp8.000.000",
   },
                 {
@@ -122,8 +122,8 @@ const cars = [
       "assets/mobil/expander3.jpg"
     ],
     priceDaily: "Rp450.000",
-    priceWeekly: "Rp3.000.000",
-    priceMonthly: "Rp9.000.000",
+    priceWeekly: "Rp3.150.000",
+    priceMonthly: "Rp9.500.000",
   },
                   {
     name: "Honda City RS Hatchback 2021 Matic",
@@ -134,7 +134,7 @@ const cars = [
     ],
     priceDaily: "Rp500.000",
     priceWeekly: "Rp3.500.000",
-    priceMonthly: "Rp14.000.000",
+    priceMonthly: "Rp10.000.000",
   },
 ];
 
